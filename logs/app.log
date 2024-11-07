@@ -1,0 +1,22 @@
+16:16:34.767 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.msp.library.mgmt.librarymgmtbookservice.LibraryMgmtBookServiceApplicationTests]: LibraryMgmtBookServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:16:35.409 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.msp.library.mgmt.LibraryMgmtBookServiceApplication for test class com.msp.library.mgmt.librarymgmtbookservice.LibraryMgmtBookServiceApplicationTests
+16:16:37.403 [main] INFO  c.m.l.m.l.LibraryMgmtBookServiceApplicationTests - Starting LibraryMgmtBookServiceApplicationTests using Java 21.0.2 with PID 22692 (started by Vasu_Seelamneni in C:\Vasu-Local\Java-Microservices\library-mgmt-book-service)
+16:16:37.416 [main] INFO  c.m.l.m.l.LibraryMgmtBookServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+16:16:41.425 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:16:41.698 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 242 ms. Found 1 JPA repository interface.
+16:16:44.494 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:16:45.483 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@638afcaa
+16:16:45.488 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:16:45.707 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:16:46.186 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+16:16:46.393 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+16:16:48.127 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:16:48.434 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16:16:51.525 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:16:51.539 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:16:54.937 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:16:58.571 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+16:16:58.798 [main] INFO  c.m.l.m.l.LibraryMgmtBookServiceApplicationTests - Started LibraryMgmtBookServiceApplicationTests in 22.63 seconds (process running for 28.021)
+16:16:58.807 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:16:58.816 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+16:16:58.863 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

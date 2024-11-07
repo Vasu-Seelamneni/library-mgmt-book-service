@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookservice-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bookservice
+  template:
+    metadata:
+      labels:
+        app: bookservice
+    spec:
+      volumes:
+        - name: bookservice-config-volume
+          configMap:
+            name: bookservice-config
+            defaultMode: 420
+      containers:
+        - name: bookservice
+          image: bookservice:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: JAVA_ARGS
+              value: "--spring.config.location=/app/config/application.properties"
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: bookservice-config-volume
+              mountPath: /app/config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookservice-service
+spec:
+  selector:
+    app: bookservice
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8080
