@@ -1,5 +1,6 @@
 package com.msp.library.mgmt.service.impl;
 
+import com.msp.library.mgmt.exception.BookNotFoundException;
 import com.msp.library.mgmt.model.Book;
 import com.msp.library.mgmt.repository.BookRepository;
 import com.msp.library.mgmt.service.BookService;
@@ -36,10 +37,9 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Boolean isBookAvailable(Long bookId) {
+    public Book isBookAvailable(Long bookId) {
         return bookRepository.findById(bookId)
-                .map(Book::getAvailable)
-                .orElse(false);
+                .orElseThrow(() -> new BookNotFoundException("Book with id " + bookId + " not found"));
     }
 
     @Override

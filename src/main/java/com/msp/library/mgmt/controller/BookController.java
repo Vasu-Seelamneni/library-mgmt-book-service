@@ -35,7 +35,7 @@ public class BookController {
     }
 
     @GetMapping("/available/{bookId}")
-    public ResponseEntity<Boolean> isBookAvailable(@PathVariable("bookId") Long bookId) {
+    public ResponseEntity<Book> isBookAvailable(@PathVariable("bookId") Long bookId) {
         return ResponseEntity.ok(bookService.isBookAvailable(bookId));
     }
 

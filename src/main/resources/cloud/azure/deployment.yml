@@ -24,6 +24,16 @@ spec:
           env:
             - name: JAVA_ARGS
               value: "--spring.config.location=/app/config/application.properties"
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  key: db-username
+                  name: db-credentials
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: db-password
+                  name: db-credentials
           ports:
             - containerPort: 8080
           volumeMounts:
