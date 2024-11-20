@@ -12,7 +12,7 @@ public interface BookService {
 
     Iterable<Book> getAllBooks();
 
-    Book isBookAvailable(Long bookId);
+    Boolean isBookAvailable(Long bookId);
 
     void updateBookAvailability(Long bookId, Boolean available);
 }

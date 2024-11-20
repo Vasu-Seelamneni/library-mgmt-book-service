@@ -1,4 +1,0 @@
-package com.msp.library.mgmt.exception;
-
-public class InvalidBookRequestException {
-}

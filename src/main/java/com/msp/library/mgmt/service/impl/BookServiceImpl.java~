@@ -1,5 +1,6 @@
 package com.msp.library.mgmt.service.impl;
 
+import com.msp.library.mgmt.exception.BookNotFoundException;
 import com.msp.library.mgmt.model.Book;
 import com.msp.library.mgmt.repository.BookRepository;
 import com.msp.library.mgmt.service.BookService;
